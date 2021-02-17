@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+<style>
+body {
+font-size: 10vw;
+}
+
+.center {
+  margin: auto;
+  width: 90%;
+  padding: 10px;
+}
+
+input {
+width:90%;
+	font-size: 10vw;
+  outline-style: outset;
+  outline-color: blue;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+
+}
+</style>
+
+</head>
+<html>
+<body>
+<p class="center" >Chiave elettronica</p>
+<form method="post" action="/index.html" >
+password: 
+<input type="hidden" value="" name="azione">
+<input type="password" value="" name="pwd">
+<p></p>
+<input  type="submit" style="background-color:red; color: #ffffff;" value="Attiva" onclick="document.getElementsByName('azione')[0].value='attiva'">
+<p></p>
+<input  type="submit" value="Disattiva" style="background-color:green; color: yellow;" onclick="document.getElementsByName('azione')[0].value='disattiva'">
+<p></p>
+</form>
+<form method="post" action="/password.html" >
+<input  type="submit" value="cambia password" style="background-color:yellow; color: red;" onclick="document.getElementsByName('azione')[0].value='password'">
+</form>
+
+</body>
+</html>
